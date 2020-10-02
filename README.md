@@ -1,1 +1,11 @@
 # Deep-Learning
+This assignment, required using deep learning recurrent neural networks to model bitcoin closing prices. One model used the fear and greed (FNG) indicators to predict the closing price while the second model used a window of closing prices to predict the nth closing price. In this process, we started by preparing the data for training and testing, then we built and trained a custom long short term memory recurrent neural network (LSTM RNN) and we evaluated the performance of the model before making predictions using the model. This process was done for both the closing prices model and the fear and greed model. Finally, we compared the two models based on their loss values, their predicted values compared to the real values. 
+
+Which model has a lower loss?
+The model with closing prices has a lower loss at loss: 0.0487 compared to the model with fear and greed wich has a loss of loss: 0.1911.
+Which model tracks the actual values better over time?
+At this time both models track the actual values similarly, when we look at the DataFrame of Real and Predicted values. However, looking at the predicted values the model with fear and greed has predicted values that are more closer to the Real values.
+Which window size works best for the model?
+We didn't experiment with a window size other than the 10 day window, however, the closing prices model performed best with 20 units and 2 batch sizes. This window provides the lowest loss at loss: 0.0283 with predicted values that are closer to the real values.
+ 
+ After this first step, we experimented with the model architecture and parameters using defferent number of units, different batch sizes and different epochs to test how the two models would compare. As a result, the model with closing prices has consistently had a lower loss at each iteration with predicted values that are closer to the real values than the model with fear and greed values which has a higher loss and higher predicted values that are far apart from the real values at each iteration. Both models track the actual values similarly, however the model with closing prices has predicted values that are closer to the real values than the model with fear and greed values.
